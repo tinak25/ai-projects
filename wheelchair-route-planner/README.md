@@ -37,7 +37,7 @@ Distance: 4.42 km, about 53 min
 
 ## What I fixed from my first version
 
-This started as a university assignment. Rebuilding it, I found and fixed:
+This started as a university assignment. Issues I found and fixed in the original:
 1. **Swapped coordinates.** Longitude and latitude were read the wrong way round, so straight-line distances were wrong.
 2. **Impossible segment lengths.** 15 of 30 estimated distances were shorter than the straight line between their ends. These were corrected (see `forest_hill_map.py`).
 3. **An inadmissible heuristic.** The terrain penalty was added to the heuristic, which made A* return worse routes. Barrier avoidance now lives in the route cost, where it belongs.
@@ -84,6 +84,6 @@ jupyter notebook wheelchair_route_planner.ipynb
 - The scalability test uses generated grid maps, not a real street network.
 
 ---
-Originally built for a computational intelligence unit at Deakin University, then rebuilt with corrected data, a fresh implementation and tests.
+Built for a computational intelligence unit at Deakin University, then extended with corrected data, a fresh implementation and tests.
 
 [← Back to all projects](../README.md)

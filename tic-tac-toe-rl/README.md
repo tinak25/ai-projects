@@ -37,7 +37,7 @@ If an agent learns by playing a random opponent, how good does it really get, an
 
 ## What I fixed from my first version
 
-This started as a university assignment. Rebuilding it, I found and fixed:
+This started as a university assignment. Issues I found and fixed in the original:
 1. **Losses were recorded as draws.** When the opponent won, the result was logged as a draw, so every training chart showed a 0% loss rate. The agent actually lost 11.5% of its first 1,000 games.
 2. **Value iteration counted the final reward twice.** The empty board's value was 1.99, which is impossible when rewards are between -1 and +1. Fixed, it's 0.995.
 3. **The state didn't record whose turn it was,** so the agent was asked to choose an X move in positions where it was O's turn.
@@ -85,6 +85,6 @@ The notebook runs in under a minute.
 [2] C. J. C. H. Watkins and P. Dayan, "Q-learning," *Machine Learning*, vol. 8, pp. 279–292, 1992.
 
 ---
-Originally built for an advanced algorithms unit at Deakin University, then rebuilt with bug fixes, a minimax opponent, worst-case analysis and tests.
+Built for an advanced algorithms unit at Deakin University, then extended with bug fixes, a minimax opponent, worst-case analysis and tests.
 
 [← Back to all projects](../README.md)
